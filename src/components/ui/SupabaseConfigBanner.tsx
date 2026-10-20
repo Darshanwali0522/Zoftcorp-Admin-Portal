@@ -11,6 +11,8 @@ export function SupabaseConfigBanner() {
     return null;
   }
 
+  const isProduction = typeof window !== 'undefined' && !window.location.hostname.includes('localhost') && !window.location.hostname.includes('127.0.0.1');
+
   return (
     <div className="mb-6 rounded-xl border border-amber-300 bg-amber-50/90 p-4 shadow-xs">
       <div className="flex items-start gap-3.5">
@@ -25,11 +27,15 @@ export function SupabaseConfigBanner() {
                 Setup Needed
               </span>
             </h4>
-            <span className="text-xs text-amber-700 hidden sm:inline">Phase 1 Integration</span>
+            <span className="text-xs text-amber-700 hidden sm:inline">CMS Integration</span>
           </div>
           <p className="mt-1 text-xs sm:text-sm text-amber-800 leading-relaxed">
             Live database operations, authentication, and image uploads require valid Supabase project credentials.
-            Currently, placeholder values are detected in <code className="bg-amber-100/90 text-amber-900 px-1.5 py-0.5 rounded font-mono text-xs">.env.local</code>.
+            {isProduction ? (
+              <> Currently, environment variables are missing or unconfigured in <code className="bg-amber-100/90 text-amber-900 px-1.5 py-0.5 rounded font-mono text-xs">Vercel Project Settings</code>.</>
+            ) : (
+              <> Currently, placeholder values are detected in <code className="bg-amber-100/90 text-amber-900 px-1.5 py-0.5 rounded font-mono text-xs">.env.local</code>.</>
+            )}
           </p>
 
           <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">

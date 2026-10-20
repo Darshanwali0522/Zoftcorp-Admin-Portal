@@ -6,11 +6,13 @@ export async function updateSession(request: NextRequest) {
     request,
   });
 
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  const rawUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const rawKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  const url = rawUrl ? rawUrl.trim().replace(/^["']|["']$/g, '') : '';
+  const key = rawKey ? rawKey.trim().replace(/^["']|["']$/g, '') : '';
 
   // If Supabase is not yet configured, allow viewing pages (a setup banner will guide the user)
-  if (!url || !key || url.includes('placeholder') || url.includes('your-project-id')) {
+  if (!url || !key || url.includes('placeholder') || url.includes('your-project-id') || key.includes('placeholder') || key.includes('your-anon-key')) {
     return supabaseResponse;
   }
 
