@@ -1,0 +1,31 @@
+:root {
+  /* Zoftcorp Brand Colors */
+  --brand-navy-primary: #01153B;
+  --brand-navy-secondary: #031E4D;
+  --brand-blue: #00B3FF;
+  --brand-blue-hover: #33C2FF;
+  --brand-blue-subtle: rgba(0, 179, 255, 0.08);
+  --brand-blue-border: rgba(0, 179, 255, 0.28);
+  --brand-orange: #FF6F00;
+  --brand-orange-hover: #E66400;
+  --brand-orange-subtle: rgba(255, 111, 0, 0.08);
+  --brand-white: #FFFFFF;
+
+  /* Surface Colors */
+  --bg-page: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --bg-sidebar: #01153B;
+  --bg-sidebar-hover: #031E4D;
+  --bg-sidebar-active: #031E4D;
+
+  /* Text Colors */
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+  --text-inverse: #FFFFFF;
+
+  /* Borders */
+  --border-subtle: #E2E8F0;
+  --border-medium: #CBD5E1;
+  --border-focus: #00B3FF;
+}
