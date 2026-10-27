@@ -9,6 +9,9 @@ import {
   PlusCircle,
   FolderTree,
   Tags,
+  Handshake,
+  Star,
+  Calendar,
   LogOut,
   ChevronRight,
   X,
@@ -63,6 +66,24 @@ export function Sidebar({ userEmail, isOpen = false, onClose }: SidebarProps) {
       href: '/dashboard/tags',
       icon: Tags,
       active: pathname === '/dashboard/tags',
+    },
+    {
+      label: 'Partnerships',
+      href: '/dashboard/partnerships',
+      icon: Handshake,
+      active: pathname.startsWith('/dashboard/partnerships'),
+    },
+    {
+      label: 'Client Reviews',
+      href: '/dashboard/reviews',
+      icon: Star,
+      active: pathname.startsWith('/dashboard/reviews'),
+    },
+    {
+      label: 'Events & Meetups',
+      href: '/dashboard/events',
+      icon: Calendar,
+      active: pathname.startsWith('/dashboard/events'),
     },
   ];
 

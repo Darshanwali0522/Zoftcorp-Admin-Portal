@@ -77,6 +77,24 @@ export function Topbar({ userEmail = 'admin@zoftcorp.com', onMenuToggle }: Topba
         { label: 'Tags', href: '/dashboard/tags' },
       ];
     }
+    if (pathname.startsWith('/dashboard/partnerships')) {
+      return [
+        { label: 'Dashboard', href: '/dashboard' },
+        { label: 'Partnerships', href: '/dashboard/partnerships' },
+      ];
+    }
+    if (pathname.startsWith('/dashboard/reviews')) {
+      return [
+        { label: 'Dashboard', href: '/dashboard' },
+        { label: 'Client Reviews', href: '/dashboard/reviews' },
+      ];
+    }
+    if (pathname.startsWith('/dashboard/events')) {
+      return [
+        { label: 'Dashboard', href: '/dashboard' },
+        { label: 'Events & Meetups', href: '/dashboard/events' },
+      ];
+    }
     return [{ label: 'Dashboard', href: '/dashboard' }];
   };
 

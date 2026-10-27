@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" fill="none">
+  <g transform="translate(0, 5)">
+    <path d="M18.1 2L3.7 23.3H12.8L21.8 9.6L18.1 2Z" fill="#0078D4"/>
+    <path d="M19.5 3.8L11.2 31.3H21.6L29.6 16.8L19.5 3.8Z" fill="#50E6FF"/>
+    <path d="M0.7 31.3H18.1L27.7 17.4L19.5 3.8L0.7 31.3Z" fill="#0078D4"/>
+  </g>
+  <text x="38" y="25" font-family="Segoe UI, sans-serif" font-weight="600" font-size="20" fill="#0f172a">Azure</text>
+</svg>
